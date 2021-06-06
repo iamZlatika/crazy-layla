@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+/* COMMON */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,27 +14,17 @@ body {
   width: 382px;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
 
 img {
-  height: 320px;
-  width: 382px;
-  transform: translateY(-20px);
-  transition: transform 0.4s ease;
-  overflow: hidden;
   z-index: -1;
 }
-.container:hover img {
-  transform: translateY(0);
-}
 
-.bg {
+.info {
   position: absolute;
-  top: 0;
   height: 290px;
   width: 382px;
-  background-color: transparent;
-  transition: top 0.4s ease;
   color: #fff;
   display: flex;
   align-items: center;
@@ -40,35 +32,60 @@ img {
   flex-direction: column;
   overflow: hidden;
 }
-.container:hover .bg {
+
+.info h3 {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+span {
+  font-weight: 700;
+}
+.info p {
+  max-width: 270px;
+  text-align: center;
+}
+
+/* CRAZY LAYLA */
+
+.layla-info {
+  background-color: transparent;
+  top: 0;
+  transition: top 0.4s ease;
+}
+.crazy-layla:hover .info {
   background-color: rgba(171, 212, 208, 0.199);
 }
 
-.bg h3 {
-  font-size: 25px;
+.crazy-layla img {
+  transform: translateY(-20px);
+  transition: transform 0.4s ease;
+  overflow: hidden;
+  height: 320px;
+  width: 382px;
+}
+.crazy-layla:hover img {
+  transform: translateY(0);
+}
+
+.crazy-layla h3 {
   transform: translateY(-20px);
   margin-bottom: 5px;
   transition: all 0.4s ease;
 }
-.container:hover .bg h3 {
+.crazy-layla:hover .info h3 {
   transform: translateY(0px);
 }
 
-.bg p {
+.layla-info p {
   opacity: 0;
-  max-width: 270px;
-  text-align: center;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.2s;
 }
-.container:hover .bg p {
+.crazy-layla:hover .info p {
   opacity: 1;
 }
 
-span {
-  font-weight: bold;
-}
-
-.bg:before {
+.layla-info:before {
   content: "";
   position: absolute;
   width: 300px;
@@ -78,20 +95,62 @@ span {
   transition: all ease-in-out 0.7s;
   height: 0;
 }
-.container:hover .bg:before {
-  height: 220px;
+.crazy-layla:hover .layla-info:before {
+  height: 230px;
 }
 
-.bg:after {
+.layla-info:after {
   content: "";
   position: absolute;
   width: 0px;
-  left: 10%;
+  left: 7%;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   transition: all ease-in-out 0.7s;
   height: 200px;
 }
-.container:hover .bg:after {
-  width: 300px;
+.crazy-layla:hover .layla-info:after {
+  width: 330px;
+}
+
+/* OSCAR */
+
+.oscar-info {
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  transition: all 0.4s ease;
+}
+.oscar-info:hover {
+  background: linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+}
+
+.oscar-info h3 {
+  transform: translateY(50px);
+  transition: all 0.3s ease;
+}
+
+.oscar-info:hover h3 {
+  transform: translateY(0);
+}
+
+.oscar-info p {
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.oscar-info:before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 230px;
+  top: 10%;
+  border: 1px solid #fff;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.oscar-info:hover p,
+.oscar-info:hover.oscar-info:before {
+  transform: scale(1);
 }
