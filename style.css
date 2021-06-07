@@ -154,3 +154,42 @@ span {
 .oscar-info:hover.oscar-info:before {
   transform: scale(1);
 }
+
+/* FREE SARAH */
+
+.sarah-info {
+  top: 0;
+  padding: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgba(147, 179, 158, 0.3);
+}
+
+.sarah-info:hover{
+  background-color: rgba(95, 173, 122, 0.3);
+}
+
+.sarah-info p{
+  padding-top: 30px;
+  max-width: 100%;
+  text-align: left;
+  transform: translateX(400px);
+  transition: all 0.4s ease;
+}
+
+.sarah-info:hover.sarah-info p{
+  transform: translateX(0);
+}
+.sarah-info::after{
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  height: 3px;
+  width: 0px;
+  top: 75px;
+  transition: all 0.4s ease;
+}
+
+.sarah-info:hover.sarah-info::after{
+  width: 310px;
+}
